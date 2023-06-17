@@ -11,8 +11,10 @@ def gpachecksem1(a1,b1,c1,d1,e1,f1,g1):
     messagebox.showerror("Error","Select All the grades")
   else:
     sumval=((grade[a1]*2)+(grade[b1]*3)+(grade[c1]*3)+(grade[d1]*2)+(grade[e1]*4)+(grade[f1]*4)+(grade[g1]*3))
+    print(sumval)
     gpa=sumval/21
     Label(sem1win,text="Your SEMESTER-1 GPA is:",bg="#121212",fg="#c0c0c0",font = ("Courier",15)).place(x=50,y=500) 
+    print(gpa)
     ans=round(gpa,2)
     Label(sem1win, text=str(ans),bg="red",fg="black",font = ("MV Boli", 15)).place(x=330,y=500)
 
@@ -22,8 +24,10 @@ def gpachecksem2(a2,b2,c2,d2,e2,f2,g2,h2):
     messagebox.showerror("Error","Select All the grades")
   else:
     sumval2=((grade[a2]*3)+(grade[b2]*3)+(grade[c2]*2)+(grade[d2]*4)+(grade[e2]*2)+(grade[f2]*4)+(grade[g2]*4)+(grade[h2]*3))
+    print(sumval2)
     gpa2=sumval2/25
     Label(sem2win, text = "Your SEMESTER-2 GPA is:",bg="#121212",fg="#c0c0c0",font = ("Courier", 15)).place(x=70,y=540)
+    print(gpa2)
     ans=round(gpa2,2)
     Label(sem2win, text =str(ans),bg="red",fg="black",font = ("MV Boli", 15)).place(x=330,y=540)
 
@@ -35,7 +39,9 @@ def gpachecksem3(a3,b3,c3,d3,e3,f3,g3,h3,i3):
     grade={"O":10,"A+":9,"A":8,"B+":7,"B":6,"C":5,"U":0}
     sumval3=((grade[a3]*3)+(grade[b3]*1.5)+(grade[c3]*4)+(grade[d3]*3)+(grade[e3]*2)+
       (grade[f3]*1.5)+(grade[g3]*3)+(grade[h3]*1)+(grade[i3]*4))
+    print(sumval3)
     gpa3=sumval3/23
+    print(gpa3)
     Label(sem3win, text = "Your SEMESTER-3 GPA is:",bg="#121212",fg="#c0c0c0",font = ("Courier", 15)).place(x=70,y=550)
     ans=round(gpa3,2)
     Label(sem3win, text =str(ans),bg="red",fg="black",font = ("MV Boli", 15)).place(x=340,y=550)
@@ -297,9 +303,9 @@ def opencgpa():
   sem2 = StringVar()
   sem3 = StringVar()
 
-  sem1Entry = Entry(cgpawin,bg="#121212",fg="#c0c0c0",width=15,bd=3,textvariable=sem1).place(x=330,y=70)
-  sem2Entry = Entry(cgpawin,bg="#121212",fg="#c0c0c0",width=15,bd=3,textvariable=sem2).place(x=330,y=120)
-  sem3Entry = Entry(cgpawin,bg="#121212",fg="#c0c0c0",width=15,bd=3,textvariable=sem3).place(x=330,y=170)
+  sem1Entry = Entry(cgpawin,bg="#121212",fg="#c0c0c0",width=15,bd=3,textvariable=sem1,insertbackground="white").place(x=330,y=70)
+  sem2Entry = Entry(cgpawin,bg="#121212",fg="#c0c0c0",width=15,bd=3,textvariable=sem2,insertbackground="white").place(x=330,y=120)
+  sem3Entry = Entry(cgpawin,bg="#121212",fg="#c0c0c0",width=15,bd=3,textvariable=sem3,insertbackground="white").place(x=330,y=170)
 
           
 
@@ -342,3 +348,5 @@ def optioncheck(opt):
     opencgpa()
         
 mainwin.mainloop() 
+
+
