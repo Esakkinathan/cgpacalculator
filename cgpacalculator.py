@@ -57,7 +57,7 @@ def gpachecksem4(a3,b3,c3,d3,e3,f3,g3,h3):
     print(sumval4)
     gpa4=sumval4/22
     print(gpa4)
-    Label(sem4win, text = "Your SEMESTER-3 GPA is:",bg="#121212",fg="#fff",font = ("Courier", 15)).place(x=70,y=550)
+    Label(sem4win, text = "Your SEMESTER-4 GPA is:",bg="#121212",fg="#fff",font = ("Courier", 15)).place(x=70,y=550)
     ans=round(gpa4,2)
     Label(sem4win, text =str(ans),bg="red",fg="black",font = ("MV Boli", 15)).place(x=340,y=550)
     
